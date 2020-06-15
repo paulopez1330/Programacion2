@@ -1,0 +1,5 @@
+disponible = float(input('Ingrese el Monto Disponible: '))
+precio = float(input('Ingrese el precio de la empanada: '))
+
+print(str(int(disponible //  precio)) + ' empanadas puede comprar')
+print("$" + str(disponible % precio) + ' le sobra')
