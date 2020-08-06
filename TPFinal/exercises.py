@@ -19,10 +19,9 @@ def sumCases( prov, month, cases, mat ):
 
         for i in range(len(mat)):
             for j in range(len(mat[i])):
-                if str(mat[i][0]).upper() == prov.upper():
-                    if str(mat[0][j]).upper() == month.upper():
-                        mat[i][j] = int(mat[i][j]) + int(cases)
-                        dummy = mat[i][j]
+                if str(mat[i][0]).upper() == prov.upper() and str(mat[0][j]).upper() == month.upper():
+                    mat[i][j] = int(mat[i][j]) + int(cases)
+                    dummy = mat[i][j]
 
         if dummy == None:
             raise NameError("Origen desconocido")
@@ -52,17 +51,17 @@ def printM(mat):
         dummy = ""
 
 def process():
-    corte = True
-    while corte:
+    exit = False
+    while exit != True:
         try:
             prov = validateData( str, "Ingrese provincia: ")
             if prov == 'FIN':
-                corte = False
+                exit = True
                 break
             
             month = validateData( str, "Ingrese mes: ")
             if month == 'FIN':
-                corte = False
+                exit = True
                 break
         
             causes = validateData( int, "Casos a agregar: ")
