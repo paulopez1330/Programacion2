@@ -1,5 +1,3 @@
-
-
 def calcularImpuesto(sueldo):
     d80000 = 80000
     d40000 = 40000
@@ -11,6 +9,11 @@ def calcularImpuesto(sueldo):
     else:
         return 0    
 
+def printName():
+    print('-----------------------------------\r')
+    print('Paulo Jesus Lopez\r')
+    print('-----------------------------------\r')
+
 def printM(mat):
     dummy = ""    
     
@@ -21,18 +24,15 @@ def printM(mat):
         dummy = ""
 
 def process(mat):
-    print('-----------------------------------\r')
-    print('Paulo Jesus Lopez\r')
-    print('-----------------------------------\r')
+    
+    printName()
     
     for i in range(len(mat)):
         mat[i][2] = calcularImpuesto(mat[i][1])
 
     printM( mat )
     
-    print('-----------------------------------\r')
-    print('Paulo Jesus Lopez\r')
-    print('-----------------------------------\r')
+    printName()
 
 
 
