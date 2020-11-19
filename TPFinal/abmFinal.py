@@ -14,9 +14,9 @@ def printListado(lista):
     for l in lista:
         dummy += l[0:3] + '\t'
         dummy += l[4:23] + '\t'        
-        s = l[24:33].replace('0','')
-        dummy += s + '\t'        
-        totSalario = int(totSalario) + int(s)
+        salar = int(l[24:33])
+        dummy += str(salar) + '\t'        
+        totSalario = int(totSalario) + salar
         print(dummy)
         dummy = ""
         
